@@ -15,8 +15,8 @@ const Loader = ({ type }) => {
     <div data-testid="card-loader" className="col-span-4 w-[70vw]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {
-          dizi.map(i => (
-            <div className=" flex flex-col gap-2 bg-gray-200 rounded-lg p-3 shadow-md md:w-60 animate-pulse select-none">
+          dizi.map((i,key) => (
+            <div key={key} className=" flex flex-col gap-2 bg-gray-200 rounded-lg p-3 shadow-md md:w-60 animate-pulse select-none">
               <span className="text-transparent text-sm font-bold bg-gray-400 w-1/3">.</span>
               <span className="text-transparent bg-gray-300 w-2/3">.</span>
             </div>

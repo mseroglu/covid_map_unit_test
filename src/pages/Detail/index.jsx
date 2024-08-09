@@ -20,7 +20,7 @@ const Detail = () => {
   }, [])
 
   const covidArr = Object.entries(data?.covid || {})
-  
+
   return (
     <div className="bg-zinc-800 text-white h-[calc(100vh-80px)] w-full overflow-hidden flex flex-col justify-center items-center wrapper p-6 max-lg:h-fit">
       <div className="min-h-[80vh] bg-white text-black p-8 rounded-lg shadow-lg ">
