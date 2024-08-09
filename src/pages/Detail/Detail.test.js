@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
-import { Provider } from "react-redux"
 import Detail from "."
+import { Provider } from "react-redux"
 import { configureStore } from "redux-mock-store"
 import { thunk } from "redux-thunk"
 import { BrowserRouter } from "react-router-dom"
@@ -8,12 +8,13 @@ import { BrowserRouter } from "react-router-dom"
 // test ortamındaki store'un kurulumunu yap, projede thunk kullandığımız için onu da tanıtmamız gerekir
 const mockStore = configureStore([thunk])
 
-it("Yükleme durumundaloader bileşenleri ekrana basılır", () => {
+it("Yükleme durumunda loader bileşenleri ekrana basılır", () => {
    // loading durumunda store daki veriyi simüle ediyoruz
-   const store = mockStore({
+   const store = mockStore({covidReducer:{
       isLoading: true,
       error: null,
       data: null
+   }
    })
    // ilk olarak bileşeni render et
    render(
